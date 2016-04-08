@@ -5,22 +5,22 @@ import java.util.List;
 import org.flumao.urlife.entity.User;
 
 /**
- * UserService接口
+ * UserService interface
  * @author Flumao
  *
  */
 public interface UserService {
 
 	/**
-	 * 获得列表
-	 * @param name 要查询的人名
+	 * list all users by name
+	 * @param name 
 	 * @return
 	 */
 	List<User> list(String name);
 
 	/**
-	 * 根据personId生成邻接表
-	 * @param personId 要查询的人的id
+	 * Create graph by personId
+	 * @param personId 
 	 * @return
 	 */
 	List<User> graph(Integer personId);

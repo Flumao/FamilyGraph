@@ -1,7 +1,10 @@
 package org.flumao.urlife.dao;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 import org.flumao.urlife.entity.User;
 import org.springframework.stereotype.Repository;
@@ -12,27 +15,32 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class UserDaoImpl extends BaseDaoImpl<User> implements UserDao{
-	/**
-	 * 查询所有personName为name的记录
-	 */
 	@Override
 	public List<User> list(String name) {
 		String query = "from User u where personName=?";
 		return getSession().createQuery(query).setParameter(0, name).list();
 	}
 	/**
-	 * 查询所有有直接联系的亲属，并查询他们的亲属
+	 * Create adjacency list by query personId
 	 */
 	@Override
 	public List<User> adjacencyList(Integer personId) {
 		String query = "from User u where personId=?";
-		List<User> users = getSession().createQuery(query).setParameter(0, personId).list();
-		List<Integer> ids = new ArrayList<Integer>();
-		for(User u : users){
-			ids.add(u.getKinId());
+		Set<User> set = new HashSet<User>(getSession().createQuery(query).setParameter(0, personId).list());
+		LinkedList<User> q = new LinkedList<User>();
+		q.addAll(set);
+		while(!q.isEmpty()){
+			User u = q.poll();
+			List<User> us = getSession().createQuery("from User u where kinId=?").setParameter(0, u.getKinId()).list();
+			for(User user : us){
+				if(!set.contains(user)){
+					set.add(user);
+					q.offer(user);
+				}
+			}
+			
 		}
-		users.addAll(getSession().createQuery("from User u where u.personId in (:ids)").setParameterList("ids", ids).list());
-		return users;
+		return new ArrayList<User>(set);
 	}
 
 }

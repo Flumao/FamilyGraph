@@ -7,7 +7,7 @@ import javax.inject.Inject;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 /**
- * BaseDaoImpl类
+ * BaseDaoImpl
  * @author Flumao
  *
  * @param <T>
@@ -19,7 +19,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	public Class<?> getClz(){
 		if(clz == null){
-			//反射生成Class的实例
+			//Get a Class instance by reflection 
 			clz = (Class<?>) (((ParameterizedType)(this.getClass().getGenericSuperclass())).getActualTypeArguments()[0]);
 		}
 		return clz;

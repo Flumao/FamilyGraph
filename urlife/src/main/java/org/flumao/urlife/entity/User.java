@@ -6,7 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 /**
- * User实体类
+ * User Entity
  * @author Flumao
  *
  */
@@ -16,43 +16,43 @@ public class User {
 	
 	private int id;
 	/**
-	 * 人物编号
+	 * person's id
 	 */
 	private int personId;
 	/**
-	 * 人物姓名
+	 * name
 	 */
 	private String personName;
 	/**
-	 * 人物性别：0为男性，1为女性
+	 * gender：0 male, 1 female
 	 */
 	private boolean personGender;//0 is male, 1 is felame
 	/**
-	 * 人物所在的朝代
+	 * dynasty
 	 */
 	private String personDynasty;
 	/**
-	 * 籍贯
+	 * address
 	 */
 	private String personAddr;
 	/**
-	 * 亲属类型，比如：父亲，母亲等
+	 * kin's type, eg: father, mother etc.
 	 */
 	private String kinship;
 	/**
-	 * 亲属id
+	 * kin's id
 	 */
 	private int kinId;
 	/**
-	 * 亲属姓名
+	 * kin's name
 	 */
 	private String kinName;
 	/**
-	 * 亲属性别：0为男性，1为女性
+	 * kin's gender：0 male, 1 female
 	 */
 	private boolean kinGender;
 	/**
-	 * 亲属籍贯
+	 * kin's address
 	 */
 	private String kinAddr;
 	

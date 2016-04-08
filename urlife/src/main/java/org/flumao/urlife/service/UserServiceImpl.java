@@ -9,7 +9,7 @@ import org.flumao.urlife.entity.User;
 import org.flumao.urlife.util.DataUtil;
 import org.springframework.stereotype.Service;
 /**
- * UserServiceImpl类，实现了UserService接口
+ * UserServiceImpl class, implemented UserService interface
  * @author Flumao
  *
  */
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 		this.userDao = userDao;
 	}
 	/**
-	 * 获得列表
+	 * list
 	 */
 	@Override
 	public List<User> list(String name) {
@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService{
 		return users;
 	}
 	/**
-	 * 生成邻接表
+	 * graph
 	 */
 	@Override
 	public List<User> graph(Integer personId) {

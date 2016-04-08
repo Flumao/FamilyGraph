@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * UserController类
+ * UserController
  * @author Flumao
  *
  */
@@ -25,8 +25,8 @@ public class UserController {
 	private UserService userService;
 	
 	/**
-	 * 查询人物名称为name的节点
-	 * @param name 任务名称
+	 * Query user node by name
+	 * @param name 
 	 * @param model
 	 * @return
 	 */
@@ -34,11 +34,11 @@ public class UserController {
 	public String search(String name, Model model){
 		List<User> users = userService.list(name);
 		model.addAttribute("users", users);
-		return "/list";//对应的是jsp,全路径应该为/WEB-INF/jsp/list.jsp,前缀和后缀已经在xml里面配置好了
+		return "/list";
 	}
 	
 	/**
-	 * 查询并生成邻接矩阵
+	 * Query and create adjacency list
 	 * @param personId
 	 * @param model
 	 * @return

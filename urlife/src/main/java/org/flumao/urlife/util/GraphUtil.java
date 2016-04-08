@@ -7,21 +7,20 @@ import org.flumao.urlife.entity.Node;
 import org.flumao.urlife.entity.User;
 
 /**
- * GraphUtil 图工具类
+ * GraphUtil 
  * 
  * @author Flumao
  * 
  */
 public class GraphUtil {
 	/**
-	 * 把User包装成Node
+	 * Wraps User to Node
 	 * @param users
 	 * @return
 	 */
 	public static List<Node> setColorAndShape(List<User> users) {
 		List<Node> nodes = new ArrayList<Node>();
 		for (int i = 0; i < users.size(); i++) {
-			//利用构造器给node添加color和shape
 			Node node = new Node(users.get(i), i);
 			nodes.add(node);
 		}

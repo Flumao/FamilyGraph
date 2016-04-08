@@ -1,6 +1,6 @@
 package org.flumao.urlife.entity;
 /**
- * Node类，dto类，用来包装User类，给User加上color属性和shape属性，用于给jsp传递数据
+ * Node  
  * @author Flumao
  *
  */
@@ -15,43 +15,43 @@ public class Node {
 	 */
 	private String personName;
 	/**
-	 * 人物性别：0为男性，1为女性
+	 * gender: 0 male, 1 female
 	 */
 	private boolean personGender;//0 is male, 1 is felame
 	/**
-	 * 人物所处朝代
+	 * dynasty
 	 */
 	private String personDynasty;
 	/**
-	 * 人物籍贯
+	 * hometown address
 	 */
 	private String personAddr;
 	/**
-	 * 亲属类型
+	 * kinship type
 	 */
 	private String kinship;
 	/**
-	 * 亲属id
+	 * kinship id
 	 */
 	private int kinId;
 	/**
-	 * 亲属姓名
+	 * kin name
 	 */
 	private String kinName;
 	/**
-	 * 亲属性别：0为男性，1为女性
+	 * kin gender：0 male，1 female
 	 */
 	private boolean kinGender;
 	/**
-	 * 亲属籍贯
+	 * kin's address
 	 */
 	private String kinAddr;
 	/**
-	 * 人物节点颜色
+	 * user node's color
 	 */
 	private String color;
 	/**
-	 * 人物节点形状，圆形或者矩形
+	 * user node's shape
 	 */
 	private String shape;
 	

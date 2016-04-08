@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 /**
- * IndexController类，控制主页的跳转，跳转到/WEB-INF/jsp/index.jsp
+ * IndexController, direct to "/WEB-INF/jsp/index.jsp"
  * @author Flumao
  *
  */

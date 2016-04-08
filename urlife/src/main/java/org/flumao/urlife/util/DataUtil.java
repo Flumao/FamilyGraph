@@ -4,13 +4,13 @@ import java.util.List;
 
 import org.flumao.urlife.entity.User;
 /**
- * 数据工具类
+ * Data Utility Class
  * @author Flumao
  *
  */
 public class DataUtil {
 	/**
-	 * 删除users中重复的元素
+	 * Remove duplicates elements 
 	 * @param users
 	 */
 	public static void removeDuplicate(List<User> users) {
