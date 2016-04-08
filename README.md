@@ -4,4 +4,4 @@ Data mining, revealed inner connections in Chinese Biographical Database (CBDB) 
 ####Click here to watch demo on YouTube.
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=HtAroKUMD8Y
 " target="_blank"><img src="http://img.youtube.com/vi/HtAroKUMD8Y/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="480" height="360" border="10" /></a>
